@@ -1,5 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./globals.css";
+import SignInForm from "./_auth/forms/SignInForm";
+import { Home } from "./_root/pages";
 
 function App() {
   return (
