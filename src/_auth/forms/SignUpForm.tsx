@@ -20,7 +20,10 @@ const SignUpForm = () => {
   const form = useForm<z.infer<typeof SignUpValidation>>({
     resolver: zodResolver(SignUpValidation),
     defaultValues: {
+      name: "",
       username: "",
+      email: "",
+      password: "",
     },
   });
 
@@ -32,6 +35,10 @@ const SignUpForm = () => {
   }
   return (
     <Form {...form}>
+      <div className="sm:w-420 flex justify-center items-center flex-col">
+        <img src="/assets/images/logo.svg" alt="logo" />
+      </div>
+
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
